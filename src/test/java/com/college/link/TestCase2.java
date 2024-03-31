@@ -14,7 +14,7 @@ public class TestCase2 extends TestSetup2 {
 
         productBO = new ProductBO2(driver);
         productBO.navigateToHomepage(url);
-        Thread.sleep(2000);
+
     }
      @Test
      public void TestStep2() throws InterruptedException {
@@ -26,7 +26,7 @@ public class TestCase2 extends TestSetup2 {
     public void TestStep3() throws InterruptedException {
 
         productBO.filterProduct();
-        Thread.sleep(5000);
+
     }
     @Test
     public void TestStep4() throws InterruptedException {
