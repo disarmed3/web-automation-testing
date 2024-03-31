@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" parallel="classes" thread-count="2">
+    <test name="Test Cases" preserve-order="true">
+        <classes>
+            <class name="com.college.link.TestCase1" >
+                <parameter name="url" value="https://www.amazon.com"/>
+            </class>
+            <class name="com.college.link.TestCase2" >
+                <parameter name="url" value="https://www.kotsovolos.gr"/>
+            </class>
+        </classes>
+
+    </test>
+</suite>
