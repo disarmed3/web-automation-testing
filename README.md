@@ -1,4 +1,4 @@
-2 seperate test cases executing in parallel with the help of TestNG (suite testing.xml) framework in Java.
+2 seperate test cases executing in parallel with the help of TestNG (suite testing.xml) framework in Java.  
 Allure plugin is used for reporting test summaries  
 
 Every test case has:  
