@@ -1,6 +1,7 @@
 package com.college.link.page.object;
 import java.time.Duration;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 public class SearchResultsPage2 {
@@ -22,7 +23,19 @@ public class SearchResultsPage2 {
         js.executeScript("arguments[0].click()", driver.findElement(checkbox));
     }
 
+
+
+
     public void selectProduct() {
-        driver.findElement(productLink).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(productLink));
+
+        // Scroll the element into view
+        WebElement element = driver.findElement(productLink);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
+        // Use JavaScript to click the element
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+
     }
 }
